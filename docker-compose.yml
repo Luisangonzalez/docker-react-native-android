@@ -1,0 +1,15 @@
+version: '2'
+services:
+  android:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-native-android
+    environment:
+      - PORT=19000
+    ports:
+      - "19000:19000"
+    volumes:
+      - ../:/code
+      - /dev/bus/usb:/dev/bus/usb
+
